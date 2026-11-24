@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Sobre";
+}
+
+<h1>Sobre o Equinox Project</h1>
+
+<p class="lead">
+    O Equinox é um projeto de referência open-source em .NET que mostra, num sistema pequeno de cadastro de clientes,
+    como aplicar DDD, CQRS e Event Sourcing numa arquitetura em camadas.
+</p>
+
+<h2 class="mt-4 mb-3">Principais funcionalidades</h2>
+
+<div class="row mb-4">
+    <div class="col-md-6 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Gestão de clientes</h5>
+                <p class="card-text">Listar, ver detalhes, cadastrar, editar e remover clientes. As regras de negócio e as validações ficam no domínio.</p>
+                <a class="card-link" asp-area="" asp-controller="Customer" asp-action="Index">Ver a lista de clientes</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Histórico de alterações</h5>
+                <p class="card-text">Cada mudança em um cliente é registrada como evento (Event Sourcing), e o histórico completo pode ser consultado nos detalhes do cliente.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Autenticação e permissões</h5>
+                <p class="card-text">Registro e login com ASP.NET Identity. Consultar é livre; cadastrar, editar e remover exigem usuário autenticado com as permissões certas.</p>
+                <a class="card-link" asp-area="Identity" asp-page="/Account/Login">Ir para o login</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">API REST</h5>
+                <p class="card-text">Os mesmos casos de uso expostos por uma WebAPI protegida por autenticação e documentada com Swagger.</p>
+                <a class="card-link" href="https://localhost:5001/swagger" target="_blank">Abrir a documentação da API</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="mb-3">Arquitetura</h2>
+<ul>
+    <li>Camadas separadas: UI, Application, Domain e Infra (dados, Identity e IoC).</li>
+    <li>Comandos e eventos trafegam pelo MediatR (CQRS).</li>
+    <li>Persistência com EF Core; validações com FluentValidation; mapeamento com AutoMapper.</li>
+</ul>
