@@ -26,11 +26,11 @@ To know more about how to setup your enviroment visit the [Microsoft .NET Downlo
 
 ## Technologies implemented:
 
-- ASP.NET 9.0
+- ASP.NET 10.0
  - ASP.NET MVC Core 
  - ASP.NET WebApi Core with JWT Bearer Authentication
  - ASP.NET Identity Core
-- Entity Framework Core 9.0
+- Entity Framework Core 10.0
 - Custom Automatic Mapping (no more AutoMapper)
 - FluentValidator
 - NetDevPack.SimpleMediator (no more MediatR)
@@ -52,7 +52,7 @@ To know more about how to setup your enviroment visit the [Microsoft .NET Downlo
 ## News
 
 **v1.10 - 04/08/2025**
-- Migrated to .NET 9.0
+- Migrated to .NET 10.0
 - Replaced MediatR with [NetDevPack.SimpleMediator](https://github.com/NetDevPack/SimpleMediator) for lighter and native CQRS handling
 - Removed AutoMapper in favor of lightweight custom mapping extensions
 - Architecture Tests with [NetArchTest.Rules](https://github.com/BenMorris/NetArchTest)
